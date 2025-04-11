@@ -1,0 +1,21 @@
+[
+    {
+      "category": "Seafood Special",
+      "image": "seafoods.jpg",
+      "name": "Fried Salmon Special",
+      "description": "A delightful dish featuring fresh salmon fried to perfection with a touch of herbs."
+    },
+    {
+      "category": "Sumptuous Desserts",
+      "image": "desserts.jpg",
+      "name": "Choco Ice Cream Sandwich",
+      "description": "Indulge in layers of chocolate goodness with creamy ice cream in the middle."
+    },
+    {
+      "category": "Buffet",
+      "image": "buffet.jpg",
+      "name": "Mixed Buffet",
+      "description": "Enjoy a variety of dishes from fruits to sandwiches, catering to every palate."
+    }
+  ]
+  

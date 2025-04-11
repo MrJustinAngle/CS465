@@ -1,8 +1,6 @@
 /* GET Homepage */
-const index = (reg, res) => {
-    res.render('index', { title: "Travlr Getaways"});
+const index = (req, res) => {
+  res.render('index', { title: 'Travlr Getaways' });
 };
 
-module.exports = {
-    index
-}
+module.exports = { index };

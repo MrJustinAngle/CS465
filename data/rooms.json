@@ -1,0 +1,20 @@
+[
+    {
+        "name": "First Class Room",
+        "description": "A beutiful room with a view of the ocean. Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo moll is vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. Fusce at pretium felis. Sed consequat libero ut turpis venenatis ut aliquam risus semper. Etiam conv allis mi vel risus pretium sodales. Etiam nunc lorem ullamcorper",
+        "rate": "220 / Day",
+        "image": "first-class.jpg"
+    },
+    {
+        "name": "Deluxe Room",
+        "description": "A relaxing room with a view of the garden. Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo moll is vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. Fusce at pretium felis. Sed consequat libero ut turpis venenatis ut aliquam risus semper. Etiam conv allis mi vel risus pretium sodales. Etiam nunc lorem ullamcorper vitae laoreet.",
+        "rate": "150 / Day",
+        "image": "deluxe.jpg"
+    },
+    {
+        "name": "Suite Room",
+        "description": "All natural room with a view of the forest. Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. Fusce at pretium felis. Sed consequat libero ut turpis venenatis ut aliquam risus semper. Etiam conv allis mi vel risus pretium sodales. Etiam nunc lorem ullamcorper vitae laoreet.",
+        "rate": "180 / Day",
+        "image": "suite.jpg"
+    }
+]
