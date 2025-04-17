@@ -1,26 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router'; // Import Router for navigation
-import { Trip } from '../models/trip'; // Import Trip model
+import { Component, Input } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
+import { Trip } from '../models/trip';
 
 @Component({
   selector: 'app-trip-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CurrencyPipe],
   templateUrl: './trip-card.component.html',
-  styleUrls: ['./trip-card.component.css']
+  styleUrls: ['./trip-card.component.css'],
 })
-export class TripCardComponent implements OnInit {
-  @Input('trip') trip: any;
+export class TripCardComponent {
+  @Input('trip') trip!: Trip;
 
-  constructor(private router: Router) {} // Inject Router
-
-  ngOnInit(): void {}
-
-  // Add editTrip method
-  public editTrip(trip: Trip): void {
-    localStorage.removeItem('tripCode'); // Remove any previous trip code
-    localStorage.setItem('tripCode', trip.code); // Store the current trip code
-    this.router.navigate(['/edit-trip']); // Navigate to the edit trip page
+  public editTrip(): void {
+    console.log('Editing trip:', this.trip);
   }
 }

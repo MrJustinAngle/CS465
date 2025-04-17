@@ -4,6 +4,7 @@ import { TripCardComponent } from '../trip-card/trip-card.component';
 import { TripDataService } from '../services/trip-data.service';
 import { Trip } from '../models/trip';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-trip-listing',
@@ -11,21 +12,19 @@ import { Router } from '@angular/router';
   imports: [CommonModule, TripCardComponent],
   templateUrl: './trip-listing.component.html',
   styleUrls: ['./trip-listing.component.css'],
-  providers: [TripDataService]
+  providers: [TripDataService],
 })
 export class TripListingComponent implements OnInit {
-  trips!: Trip[];
+  trips: Trip[] = [];
   message: string = '';
 
   constructor(
     private tripDataService: TripDataService,
-    private router: Router
-  ) {
-    console.log('trip-listing constructor');
-  }
+    private router: Router,
+    private authenticationService: AuthenticationService // Ensure injected
+  ) {}
 
   ngOnInit(): void {
-    console.log('ngOnInit called');
     this.getTrips();
   }
 
@@ -33,18 +32,23 @@ export class TripListingComponent implements OnInit {
     this.tripDataService.getTrips().subscribe({
       next: (value: Trip[]) => {
         this.trips = value;
-        this.message = value.length > 0 
-          ? `There are ${value.length} trips available.` 
-          : 'There were no trips retrieved from the database';
-        console.log(this.message);
+        this.message =
+          value.length > 0
+            ? `There are ${value.length} trips available.`
+            : 'No trips found in the database.';
       },
       error: (error: any) => {
-        console.error('Error:', error);
-      }
+        console.error('Error retrieving trips:', error);
+      },
     });
   }
 
+  public isLoggedIn(): boolean {
+    return this.authenticationService.isLoggedIn(); // Correct implementation
+  }
+
   public addTrip(): void {
+    console.log('Navigating to Add Trip');
     this.router.navigate(['add-trip']);
   }
 }
